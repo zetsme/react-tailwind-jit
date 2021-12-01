@@ -1,13 +1,33 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.scrollbar ::-webkit-scrollbar {
+  background-color: #93c5fd;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.scrollbar ::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn-arrow {
+  @apply disabled:bg-gray-300 disabled:cursor-not-allowed bg-blue-300 pb-1 rounded-lg text-2xl md:text-4xl w-[40px] md:w-[50px] self-center;
+}
+.btn-pagination {
+  @apply bg-blue-400 rounded-md py-2 px-4;
 }
